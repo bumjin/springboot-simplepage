@@ -45,3 +45,14 @@ Home 디렉토리의 .bash_profile에 다음 설정 추가
 $source .bash_profile
 $env 실행해 설정 
 
+## 1-5. 원격 서버(개발 서버 또는 실 서버)에 소스 코드 배포하기 2
+* 자바 설치
+* git 설치
+* git clone 후 빌드
+ * 서버 시작
+
+git clone https://github.com/bumjin/springboot-simplepage.git
+cd target 
+java -jar my-bumjin-1.0.jar &
+
+config.vm.network "forwarded_port", guest: 8080, host: 18080
